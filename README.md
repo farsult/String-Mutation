@@ -30,12 +30,12 @@ new SM(/*string*/)
 type `.value` to access the value.
 
 ```js
-console.log(SM('Jane').value);
-//=>"Jane"
+console.log(SM('John Doe').value);
+//=>"John Doe"
 ```
 
-### Methods
-.reverse(position)
+## Methods
+*.reverse(position)*
 
 ```js
 var a = SM("John Doe").reverse("");
@@ -47,22 +47,22 @@ var a = SM("John Doe").reverse(" ");
 //=>"Doe John"
 ```
 
-.indexOf(chr[, num]) - returns the index value of the character in a string starting from the left. When there is more than one character in a string specify the second argument (e.g. `1`(st), `2`(nd), ..).
+*.indexOf(chr[, num])* - returns the index value of the character in a string starting from the left. When there is more than one character in a string specify the second argument (e.g. `1`(st), `2`(nd), ..).
 
 ```js
 console.log(SM("John Doe").indexOf("o", 2));
 //=>6
 ```
 
-.countChar(chr) - finds amount of characters in a string.
+*.countChar(chr)* - finds amount of characters in a string.
 
 ```js
 console.log(SM("John Doe drinks too much Coffee").countChar("n"));
 //=>2
 ```
-*All other methods work the same as in an Array*
+All other methods work the same as in an Array
 
-### Example
+## Example
 
 ```js
 var a = SM("John Doe").splice(0, 4, "Jane");
