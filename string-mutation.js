@@ -1,4 +1,4 @@
-//  String Mutation may be freely distributed under the MIT license.
+//  String-Mutation may be freely distributed under the MIT license.
 
 (function(global){
 
