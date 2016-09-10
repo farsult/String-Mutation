@@ -1,4 +1,4 @@
-# String-Mutation
+# StringMutation
 
 ## Features
 
