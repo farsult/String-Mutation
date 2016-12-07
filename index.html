@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Stringmutation by farsult</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/farsult/StringMutation">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Stringmutation</h1>
+            <h2>javascript string mutation library</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/farsult/StringMutation/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/farsult/StringMutation/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="stringmutation" class="anchor" href="#stringmutation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>StringMutation</h1>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Use these Array methods on a String. Each method changes original string value.</p>
+
+<pre><code> - .map()
+ - .splice()
+ - .indexOf() 
+ - .reverse()
+ - .pop()
+ - .push()
+ - .shift()
+ - .unshift()
+ - .sort()
+ - .keys()
+ - .countChars()
+</code></pre>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Download <code>string-mutation.js</code> and include it in your <code>index.html</code> file.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Create a new SM object</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">SM</span>(<span class="pl-c">/*string*/</span>);
+<span class="pl-c">//or</span>
+<span class="pl-k">new</span> <span class="pl-en">SM</span>(<span class="pl-c">/*string*/</span>)</pre></div>
+
+<p>type <code>.value</code> to access the value.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">'</span>John Doe<span class="pl-pds">'</span></span>).<span class="pl-c1">value</span>);
+<span class="pl-c">//=&gt;"John Doe"</span></pre></div>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h2>
+
+<p><strong>.reverse(position)</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>).<span class="pl-c1">reverse</span>(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">a</span>.<span class="pl-c1">value</span>);
+<span class="pl-c">//=&gt;"eoD nhoJ"</span>
+
+<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>).<span class="pl-c1">reverse</span>(<span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span>);
+<span class="pl-c">//=&gt;"Doe John"</span></pre></div>
+
+<p><strong>.indexOf(chr[, num])</strong> - returns the index value of the character in a string starting from the left. When there is more than one character in a string specify the second argument (e.g. <code>1</code>(st), <code>2</code>(nd), ..).</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>).<span class="pl-c1">indexOf</span>(<span class="pl-s"><span class="pl-pds">"</span>o<span class="pl-pds">"</span></span>, <span class="pl-c1">2</span>));
+<span class="pl-c">//=&gt;6</span></pre></div>
+
+<p><strong>.countChar(chr)</strong> - finds amount of characters in a string.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe drinks too much Coffee<span class="pl-pds">"</span></span>).<span class="pl-en">countChar</span>(<span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>));
+<span class="pl-c">//=&gt;2</span></pre></div>
+
+<p>All other methods work the same as in an Array</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>).<span class="pl-c1">splice</span>(<span class="pl-c1">0</span>, <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>Jane<span class="pl-pds">"</span></span>);
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">a</span>.<span class="pl-c1">value</span>);
+<span class="pl-c">//=&gt;"Jane Doe"</span>
+
+<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>).<span class="pl-c1">splice</span>(<span class="pl-c1">0</span>, <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>Jane<span class="pl-pds">"</span></span>).<span class="pl-c1">pop</span>().<span class="pl-c1">pop</span>().<span class="pl-c1">push</span>(<span class="pl-s"><span class="pl-pds">"</span>wane<span class="pl-pds">"</span></span>);
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">a</span>.<span class="pl-c1">value</span>);
+<span class="pl-c">//=&gt;"Jane Dwane"</span>
+
+<span class="pl-k">var</span> a <span class="pl-k">=</span> <span class="pl-en">SM</span>(<span class="pl-s"><span class="pl-pds">"</span>John Doe<span class="pl-pds">"</span></span>)
+.<span class="pl-c1">splice</span>(<span class="pl-c1">0</span>, <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>Jane<span class="pl-pds">"</span></span>)
+.<span class="pl-c1">pop</span>()
+.<span class="pl-c1">pop</span>()
+.<span class="pl-c1">push</span>(<span class="pl-s"><span class="pl-pds">"</span>wane<span class="pl-pds">"</span></span>)
+.<span class="pl-en">map</span>(<span class="pl-k">function</span>(<span class="pl-smi">v</span>){ 
+    <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-pds">"</span></span> <span class="pl-k">+</span> v <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-pds">"</span></span>; 
+});
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">a</span>.<span class="pl-c1">value</span>);
+<span class="pl-c">//=&gt;"{J}{a}{n}{e}{ }{D}{w}{a}{n}{e}"</span></pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/farsult">farsult</a> can be found on <a href="https://github.com/farsult/StringMutation">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
